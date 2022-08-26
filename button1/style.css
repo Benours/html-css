@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 3em;
+    overflow-y: clip;
+}
+
+.slider {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    width: 0.3em;
+    height: 5em;
+    transform: rotateZ(20deg);
+    background-color: aqua;
+}
+
+.button > .slider {
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover:not(:focus) > .slider {
+    transition: all 0.5s ease-in-out;
+    left: 100%;
+}
+
+.button:focus > .slider {
+    transition: all 0.5s ease-in-out;
+    left: 100%;
+}
+
+.background-slider {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 10em;
+    transform: rotateZ(20deg);
+    background-color: rgba(0, 255, 255, 0.478);
+}
+
+.button > .background-slider {
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover:not(:focus) > .background-slider {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+
+.button:focus > .background-slider {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+.text-button {
+    font-size: 17px;
+    color: white;
+    font-weight: bolder;
+}
